@@ -1,0 +1,40 @@
+{
+  "id": "demo-job-001",
+  "pipeline": "risk-score",
+  "status": "completed",
+  "payload": {
+    "customer_id": "C-100",
+    "income": 72000,
+    "debt": 12000
+  },
+  "result": {
+    "customer_id": "C-100",
+    "income": 72000,
+    "debt": 12000,
+    "validated": true,
+    "debt_ratio": 0.1667,
+    "risk_score": 0.4167,
+    "decision": "approve"
+  },
+  "steps": [
+    {
+      "step_name": "validate",
+      "attempt": 1,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step_name": "score",
+      "attempt": 1,
+      "status": "completed",
+      "error": null
+    },
+    {
+      "step_name": "decision",
+      "attempt": 1,
+      "status": "completed",
+      "error": null
+    }
+  ]
+}
+

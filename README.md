@@ -4,6 +4,12 @@ A local event-driven ML workflow orchestrator inspired by cloud/serverless archi
 
 This project demonstrates production-style orchestration, retries, job state, metrics, and API design without requiring AWS or paid services.
 
+## Output Proof
+
+- Open [demo/index.html](demo/index.html) for a visual sample workflow run dashboard.
+- Review [sample_outputs/risk_score_job.json](sample_outputs/risk_score_job.json) for a concrete job-status API output.
+- See [docs/demo.md](docs/demo.md) for what the demo proves.
+
 ## What This Demonstrates
 
 - Event-driven pipeline design.
@@ -48,4 +54,3 @@ curl -X POST http://127.0.0.1:8000/pipelines/risk-score/jobs -H "Content-Type: a
 - This is a local orchestrator for learning and portfolio demonstration.
 - It is not a replacement for Airflow, Prefect, Dagster, or AWS Step Functions.
 - Workers run in-process in v1.
-
