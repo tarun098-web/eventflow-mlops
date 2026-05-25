@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">EventFlow MLOps demo loop</title>
+  <desc id="desc">Animated README demo showing an event-driven ML workflow run with steps, retries, and final output.</desc>
+  <style>
+    .bg { fill: #edf1f7; }
+    .panel { fill: #ffffff; stroke: #d8e0ea; stroke-width: 2; }
+    .paper { fill: #f7f9fc; stroke: #d8e0ea; stroke-width: 2; }
+    .ink { fill: #1d2430; font-family: Segoe UI, Arial, sans-serif; }
+    .muted { fill: #627084; font-family: Segoe UI, Arial, sans-serif; }
+    .mono { fill: #e5edf7; font-family: Consolas, monospace; }
+    .blue { fill: #2367c9; }
+    .green { fill: #12845d; }
+    .code { fill: #111827; }
+    .step1 { animation: stepPulse 4.5s ease-in-out infinite; transform-origin: center; }
+    .step2 { animation: stepPulse 4.5s ease-in-out infinite; animation-delay: .45s; transform-origin: center; }
+    .step3 { animation: stepPulse 4.5s ease-in-out infinite; animation-delay: .9s; transform-origin: center; }
+    .step4 { animation: stepPulse 4.5s ease-in-out infinite; animation-delay: 1.35s; transform-origin: center; }
+    .flow { stroke-dasharray: 12 8; animation: dash 1.4s linear infinite; }
+    @keyframes stepPulse {
+      0%, 100% { opacity: .72; transform: scale(1); }
+      35%, 70% { opacity: 1; transform: scale(1.025); }
+    }
+    @keyframes dash { to { stroke-dashoffset: -20; } }
+  </style>
+  <rect class="bg" width="1100" height="620"/>
+  <text class="ink" x="50" y="58" font-size="34" font-weight="700">EventFlow MLOps</text>
+  <text class="muted" x="50" y="90" font-size="18">Visible README proof: local event-driven orchestration, step history, and final ML workflow output.</text>
+  <rect class="panel" x="50" y="125" width="470" height="435" rx="10"/>
+  <text class="ink" x="80" y="168" font-size="22" font-weight="700">Pipeline run</text>
+  <line class="flow" x1="112" y1="230" x2="112" y2="460" stroke="#2367c9" stroke-width="4"/>
+  <g class="step1">
+    <rect class="paper" x="80" y="200" width="385" height="58" rx="9"/>
+    <circle class="blue" cx="112" cy="229" r="16"/>
+    <text x="107" y="235" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="700">1</text>
+    <text class="ink" x="145" y="235" font-size="18" font-weight="700">Validate payload</text>
+    <text class="green" x="350" y="235" font-size="16" font-weight="700">completed</text>
+  </g>
+  <g class="step2">
+    <rect class="paper" x="80" y="285" width="385" height="58" rx="9"/>
+    <circle class="blue" cx="112" cy="314" r="16"/>
+    <text x="107" y="320" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="700">2</text>
+    <text class="ink" x="145" y="320" font-size="18" font-weight="700">Score risk</text>
+    <text class="green" x="350" y="320" font-size="16" font-weight="700">completed</text>
+  </g>
+  <g class="step3">
+    <rect class="paper" x="80" y="370" width="385" height="58" rx="9"/>
+    <circle class="blue" cx="112" cy="399" r="16"/>
+    <text x="107" y="405" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="700">3</text>
+    <text class="ink" x="145" y="405" font-size="18" font-weight="700">Create decision</text>
+    <text class="green" x="350" y="405" font-size="16" font-weight="700">completed</text>
+  </g>
+  <g class="step4">
+    <rect class="paper" x="80" y="455" width="385" height="58" rx="9"/>
+    <circle class="blue" cx="112" cy="484" r="16"/>
+    <text x="107" y="490" fill="white" font-family="Segoe UI, Arial" font-size="16" font-weight="700">4</text>
+    <text class="ink" x="145" y="490" font-size="18" font-weight="700">Persist result</text>
+    <text class="green" x="350" y="490" font-size="16" font-weight="700">completed</text>
+  </g>
+  <rect class="panel" x="555" y="125" width="495" height="435" rx="10"/>
+  <text class="ink" x="585" y="168" font-size="22" font-weight="700">Run output</text>
+  <rect class="paper" x="585" y="195" width="130" height="70" rx="8"/>
+  <text class="muted" x="605" y="222" font-size="15">Status</text>
+  <text class="ink" x="605" y="250" font-size="22" font-weight="700">completed</text>
+  <rect class="paper" x="735" y="195" width="130" height="70" rx="8"/>
+  <text class="muted" x="755" y="222" font-size="15">Debt ratio</text>
+  <text class="ink" x="755" y="250" font-size="22" font-weight="700">0.1667</text>
+  <rect class="paper" x="885" y="195" width="130" height="70" rx="8"/>
+  <text class="muted" x="905" y="222" font-size="15">Decision</text>
+  <text class="ink" x="905" y="250" font-size="22" font-weight="700">approve</text>
+  <rect class="code" x="585" y="300" width="430" height="210" rx="8"/>
+  <text class="mono" x="610" y="340" font-size="17">{</text>
+  <text class="mono" x="635" y="375" font-size="17">"customer_id": "C-100",</text>
+  <text class="mono" x="635" y="410" font-size="17">"risk_score": 0.4167,</text>
+  <text class="mono" x="635" y="445" font-size="17">"decision": "approve"</text>
+  <text class="mono" x="610" y="480" font-size="17">}</text>
+</svg>
+

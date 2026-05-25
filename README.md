@@ -4,9 +4,12 @@ A local event-driven ML workflow orchestrator inspired by cloud/serverless archi
 
 This project demonstrates production-style orchestration, retries, job state, metrics, and API design without requiring AWS or paid services.
 
+![EventFlow MLOps demo loop](assets/demo.svg)
+
 ## Output Proof
 
-- Open [demo/index.html](demo/index.html) for a visual sample workflow run dashboard.
+- The loop above is visible directly in the GitHub README when the repository opens.
+- Open [demo/index.html](demo/index.html) only if you want the larger standalone demo page.
 - Review [sample_outputs/risk_score_job.json](sample_outputs/risk_score_job.json) for a concrete job-status API output.
 - See [docs/demo.md](docs/demo.md) for what the demo proves.
 
