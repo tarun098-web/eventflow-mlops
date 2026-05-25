@@ -23,7 +23,7 @@ def test_missing_payload_field_records_failure(tmp_path):
     runner = build_runner()
     runner.store = WorkflowStore(tmp_path / "flow.db")
     job_id = runner.submit("risk-score", {"customer_id": "C-1", "income": 72000})
-    with pytest.raises(ValueError):
+    with pytest.raises(RuntimeError, match="Missing fields"):
         runner.run(job_id)
     assert runner.store.get_job(job_id)["status"] == "failed"
 
@@ -68,4 +68,3 @@ def test_store_returns_step_history(tmp_path):
     job = runner.store.get_job(job_id)
     assert len(job["steps"]) == 3
     assert job["result"]["decision"] == "manual_review"
-
