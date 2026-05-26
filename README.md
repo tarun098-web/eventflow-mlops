@@ -56,4 +56,4 @@ curl -X POST http://127.0.0.1:8000/pipelines/risk-score/jobs -H "Content-Type: a
 
 - This is a local orchestrator for learning and portfolio demonstration.
 - It is not a replacement for Airflow, Prefect, Dagster, or AWS Step Functions.
-- Workers run in-process in v1.
+- Workers run in-process in v2.
